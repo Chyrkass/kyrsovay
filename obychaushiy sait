@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучающий сайт по HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #34495e;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .lesson {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .code-example {
+            background: #f0f0f0;
+            border-left: 4px solid #2c3e50;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .live-example {
+            border: 1px dashed #ccc;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+        .try-it-button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .try-it-button:hover {
+            background: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Обучающий сайт по HTML</h1>
+        <p>Изучайте основы HTML с простыми и понятными примерами</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#basics">Основы</a></li>
+            <li><a href="#text">Текст</a></li>
+            <li><a href="#links">Ссылки</a></li>
+            <li><a href="#images">Изображения</a></li>
+            <li><a href="#tables">Таблицы</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="basics" class="lesson">
+            <h2>Основы HTML</h2>
+            <p>HTML (HyperText Markup Language) - это стандартный язык разметки для создания веб-страниц.</p>
+            
+            <h3>Структура HTML-документа</h3>
+            <div class="code-example">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя первая страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+    &lt;p&gt;Это моя первая HTML-страница.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+            
+            <div class="live-example">
+                <h1>Привет, мир!</h1>
+                <p>Это моя первая HTML-страница.</p>
+            </div>
+            
+            <button class="try-it-button" onclick="window.open('https://codepen.io/pen/', '_blank')">Попробуйте сами</button>
+        </section>
+        
+        <section id="text" class="lesson">
+            <h2>Работа с текстом</h2>
+            <p>HTML предоставляет множество тегов для форматирования текста.</p>
+            
+            <h3>Примеры текстовых тегов</h3>
+            <div class="code-example">
+&lt;h1&gt;Заголовок 1 уровня&lt;/h1&gt;
+&lt;h2&gt;Заголовок 2 уровня&lt;/h2&gt;
+&lt;p&gt;Это обычный абзац текста.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Это жирный текст&lt;/strong&gt; и &lt;em&gt;это курсив&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;Подчеркнутый текст&lt;/u&gt; и &lt;s&gt;перечеркнутый текст&lt;/s&gt;.&lt;/p&gt;
+&lt;p&gt;Текст с &lt;br&gt; переносом строки.&lt;/p&gt;
+            </div>
+            
+            <div class="live-example">
+                <h1>Заголовок 1 уровня</h1>
+                <h2>Заголовок 2 уровня</h2>
+                <p>Это обычный абзац текста.</p>
+                <p><strong>Это жирный текст</strong> и <em>это курсив</em>.</p>
+                <p><u>Подчеркнутый текст</u> и <s>перечеркнутый текст</s>.</p>
+                <p>Текст с <br> переносом строки.</p>
+            </div>
+        </section>
+        
+        <section id="links" class="lesson">
+            <h2>Ссылки в HTML</h2>
+            <p>Тег &lt;a&gt; используется для создания гиперссылок.</p>
+            
+            <div class="code-example">
+&lt;!-- Простая ссылка --&gt;
+&lt;a href="https://example.com"&gt;Посетите Example.com&lt;/a&gt;
+
+&lt;!-- Ссылка с атрибутом target --&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Открыть в новой вкладке&lt;/a&gt;
+
+&lt;!-- Ссылка на email --&gt;
+&lt;a href="mailto:info@example.com"&gt;Написать нам&lt;/a&gt;
+
+&lt;!-- Ссылка-якорь --&gt;
+&lt;a href="#top"&gt;Вернуться наверх&lt;/a&gt;
+            </div>
+            
+            <div class="live-example">
+                <a href="https://example.com">Посетите Example.com</a><br>
+                <a href="https://example.com" target="_blank">Открыть в новой вкладке</a><br>
+                <a href="mailto:info@example.com">Написать нам</a><br>
+                <a href="#top">Вернуться наверх</a>
+            </div>
+        </section>
+        
+        <section id="images" class="lesson">
+            <h2>Изображения в HTML</h2>
+            <p>Тег &lt;img&gt; используется для вставки изображений на страницу.</p>
+            
+            <div class="code-example">
+&lt;!-- Простое изображение --&gt;
+&lt;img src="https://via.placeholder.com/150" alt="Пример изображения"&gt;
+
+&lt;!-- Изображение с размерами --&gt;
+&lt;img src="https://via.placeholder.com/300x200" alt="Пример" width="300" height="200"&gt;
+
+&lt;!-- Изображение с подписью --&gt;
+&lt;figure&gt;
+    &lt;img src="https://via.placeholder.com/400x300" alt="Пример"&gt;
+    &lt;figcaption&gt;Это пример изображения с подписью&lt;/figcaption&gt;
+&lt;/figure&gt;
+            </div>
+            
+            <div class="live-example">
+                <img src="https://via.placeholder.com/150" alt="Пример изображения"><br>
+                <img src="https://via.placeholder.com/300x200" alt="Пример" width="300" height="200"><br>
+                <figure>
+                    <img src="https://via.placeholder.com/400x300" alt="Пример">
+                    <figcaption>Это пример изображения с подписью</figcaption>
+                </figure>
+            </div>
+        </section>
+        
+        <section id="tables" class="lesson">
+            <h2>Таблицы в HTML</h2>
+            <p>Таблицы создаются с помощью тегов &lt;table&gt;, &lt;tr&gt;, &lt;th&gt; и &lt;td&gt;.</p>
+            
+            <div class="code-example">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Заголовок 1&lt;/th&gt;
+        &lt;th&gt;Заголовок 2&lt;/th&gt;
+        &lt;th&gt;Заголовок 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ячейка 1&lt;/td&gt;
+        &lt;td&gt;Ячейка 2&lt;/td&gt;
+        &lt;td&gt;Ячейка 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Ячейка 4&lt;/td&gt;
+        &lt;td&gt;Ячейка 5&lt;/td&gt;
+        &lt;td&gt;Ячейка 6&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </div>
+            
+            <div class="live-example">
+                <table border="1">
+                    <tr>
+                        <th>Заголовок 1</th>
+                        <th>Заголовок 2</th>
+                        <th>Заголовок 3</th>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 1</td>
+                        <td>Ячейка 2</td>
+                        <td>Ячейка 3</td>
+                    </tr>
+                    <tr>
+                        <td>Ячейка 4</td>
+                        <td>Ячейка 5</td>
+                        <td>Ячейка 6</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Обучающий сайт по HTML. Все права защищены.</p>
+    </footer>
+    
+    <script>
+        // Можно добавить интерактивные элементы, например:
+        document.querySelectorAll('.code-example').forEach(example => {
+            example.addEventListener('click', () => {
+                const range = document.createRange();
+                range.selectNode(example);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                
+                // Показать уведомление о копировании
+                const notification = document.createElement('div');
+                notification.textContent = 'Код скопирован!';
+                notification.style.position = 'fixed';
+                notification.style.bottom = '20px';
+                notification.style.right = '20px';
+                notification.style.backgroundColor = '#27ae60';
+                notification.style.color = 'white';
+                notification.style.padding = '10px';
+                notification.style.borderRadius = '5px';
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
